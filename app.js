@@ -1,26 +1,26 @@
 // Get dependencies
-var express = require('express');
-var path = require('path');
-var http = require('http');
-var bodyParser = require('body-parser');
+const express = require('express');
+//const path = require('path');
+//var http = require('http');
+//var bodyParser = require('body-parser');
 // Get our API routes
 //const api = require('./server/routes/api');
-var app = express();
+const app = express();
 // Parsers for POST data
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+//app.use(bodyParser.json());
+//app.use(bodyParser.urlencoded({ extended: false }));
 // Point static path to dist
 // app.use(express.static(path.join(__dirname, 'dist/rexTechAObservableVsNGRX')));
 //app.use(express.static(path.join(__dirname, 'dist/usEnermyscss6')));
-app.use(express.static(path.join(__dirname, 'dist/angular9awsdeploy2')));
-app.use(express.static(path.join(__dirname, 'archivesEng')));
-app.use(express.static(path.join(__dirname, 'archivesMand')));
+//app.use(express.static(path.join(__dirname, 'dist/angular9awsdeploy2')));
+//app.use(express.static(path.join(__dirname, 'archivesEng')));
+//app.use(express.static(path.join(__dirname, 'archivesMand')));
 
-app.use(express.static(path.join(__dirname, 'image')));
+//app.use(express.static(path.join(__dirname, 'image')));
 //app.use(express.static(path.join(__dirname, 'dist/rexvideoeng')));
 //app.use(express.static(path.join(__dirname, 'dist/rexvideomand')));
 
-var bluebird = require('bluebird');
+//var bluebird = require('bluebird');
 //var mongoose = require('mongoose');
 //mongoose.Promise = bluebird;
 
@@ -34,8 +34,8 @@ var bluebird = require('bluebird');
   .catch(()=> { console.log(`Error Connecting to the Mongodb Database at URL : mongodb://127.0.0.1:27017/todoapp`)})
 */
 //var bodyParser = require('body-parser');
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+//app.use(bodyParser.json());
+//app.use(bodyParser.urlencoded({ extended: false }));
 
 //var favicon = require('serve-favicon');
 // uncomment after placing your favicon in /public
@@ -50,10 +50,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // routes
 //app.use('/dbactions', require('./backend/routesapi/todos.route'));
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
 //  res.sendFile(path.join(__dirname, 'dist/rexTechAObservableVsNGRX/index.html'));
  // res.sendFile(path.join(__dirname, 'dist/usEnermyscss6/index.html'));
-    res.sendFile(path.join(__dirname, 'dist/angular9awsdeploy2/index.html'));
+    res.send("rex homepage");
 });
 /**
  * Get port from environment and store in Express.
