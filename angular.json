@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular9awsdeploy2"
+    }
+  },
+  "defaultProject": "angular9awsdeploy2",
+  "cli": {
+    "analytics": "afeed0d2-e0a9-4037-8f73-af21f30f3467"
+  }
 }
